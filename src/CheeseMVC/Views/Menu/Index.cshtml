@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<h1><a asp-controller="Menu" asp-action="Add">Add</a></h1>
+<ul>
+    @foreach (var menu in ViewBag.menus){
+        <li>
+            <a asp-controller="Menu" 
+             asp-action="ViewMenu"
+             asp-route-id=@menu.ID>@menu.Name</a>
+        </li>
+    }
+</ul>
+
